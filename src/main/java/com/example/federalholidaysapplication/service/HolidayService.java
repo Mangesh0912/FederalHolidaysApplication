@@ -50,10 +50,6 @@ public class HolidayService {
                 .orElseThrow(() -> new ServiceException("Holiday not found", new Throwable("Not Found")));
     }
 
-    public List<Holiday> listHolidays() {
-        return this.holidayRepository.findAll();
-    }
-
     public List<Holiday> getHolidaysByCountry(String countryName) {
         return this.holidayRepository.findByCountry(countryName);
     }
