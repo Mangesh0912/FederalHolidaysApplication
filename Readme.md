@@ -21,7 +21,7 @@ Clone the repo: git clone https://github.com/yourusername/federalholidays.git
 Navigate to project folder in cmd.
 Build the project -> mvn clean install
 Run the application -> mvn spring-boot:run
-Postman Collections -> These are also added to the project please import them into your Postman UI.
+Postman Collections -> These are also added to the project please import them into your Postman UI. They are present in PostmanCollections.txt file.
 Swagger UI -> Access Swagger UI at http://localhost:8080/swagger-ui/index.html
 Testing -> Run Tests using Maven : mvn test.
 

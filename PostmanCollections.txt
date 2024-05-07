@@ -1,0 +1,90 @@
+{
+    "info": {
+        "_postman_id": "a23d41a4-86d7-4f0a-83c1-34f82264288b",
+        "name": "Federal Holidays API",
+        "description": "This collection manages federal holidays.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add a new holiday",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Independence Day\", \"country\": \"USA\", \"date\": \"2024-07-04\"}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/holidays",
+                    "host": [
+                        "http://localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "holidays"
+                    ]
+                },
+                "description": "Creates a new holiday entry in the database."
+            }
+        },
+        {
+            "name": "Update an existing holiday",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\": \"Independence Day\", \"country\": \"USA\", \"date\": \"2024-07-05\"}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/holidays/1",
+                    "host": [
+                        "http://localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "holidays",
+                        "1"
+                    ]
+                },
+                "description": "Updates an existing holiday identified by its ID."
+            }
+        },
+        {
+            "name": "List all holidays by country",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/holidays?countryName=USA",
+                    "host": [
+                        "http://localhost:8080"
+                    ],
+                    "path": [
+                        "api",
+                        "holidays"
+                    ],
+                    "query": [
+                        {
+                            "key": "countryName",
+                            "value": "USA"
+                        }
+                    ]
+                },
+                "description": "Retrieve a list of holidays filtered by country name."
+            }
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
